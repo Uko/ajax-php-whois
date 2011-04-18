@@ -1,0 +1,102 @@
+#results
+{
+	width: 850px;
+	overflow: auto;
+}
+
+.info_box
+{
+	margin: 5px;
+	width: 270px;
+	float: left;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.unknown 
+{
+	background: #555;
+}
+
+.unknown .title
+{
+	color: white;
+}
+
+.yes
+{
+	background: maroon;
+}
+
+.yes .title
+{
+	color: white;
+}
+
+.no
+{
+	background: navy;
+}
+
+.no .title
+{
+	color: gold;
+}
+
+.info_box .title
+{
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+	margin: 3px 5px;
+	width: 260px;
+	text-align: center;
+}
+
+.info_box .data
+{
+	width: 250px;
+	height: 60px;
+	padding: 5px;
+	margin: 5px;
+	-moz-border-radius: 0px 0px 5px 5px;
+	border-radius: 0px 0px 5px 5px;
+	background: white;
+	text-align: justify;
+}
+
+.info_box .data .progress_bar
+{
+	margin: 22px auto;
+	display: block;
+}
+
+.info_box .main_info
+{
+	text-align: center;
+	display: block;
+	margin: 0px auto;
+	font-weight: bold;
+}
+
+.info_box .description
+{
+	margin: 0px;
+}
+
+.info_box .data a
+{
+	text-align: center;
+	display: block;
+	margin: auto;
+}
+
+#dialog
+{
+	text-align: justify;
+	font-size: 80%;
+}
+
+#dialog .progress_bar
+{
+	margin: 150px auto;
+	display: block;
+}
