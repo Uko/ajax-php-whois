@@ -89,6 +89,7 @@ $this->WHOIS_SPECIAL = array(
 		'sc'     => 'whois2.afilias-grs.net',		
 		'tc'     => 'http://www.adamsnames.tc/whois/?domain={domain}.tc',
 		'tf'     => 'http://www.adamsnames.tc/whois/?domain={domain}.tf',
+		'ua'     => 'whois.ua',	
 		've'	 => 'whois.nic.ve',
 		'vg'     => 'http://www.adamsnames.tc/whois/?domain={domain}.vg',
 		// Second level
