@@ -43,7 +43,7 @@
   						<div class=\"data\">
   							<p class=\"main_info\"></p>
   							<a class=\"site_link\"></a>
-  							<a class=\"whois\"></a>
+  							<a class=\"short_whois\"></a>
   							<p class=\"description\"></p>
   							<img src=\"#\" alt=\"…\" class=\"progress_bar\" />
   						</div>

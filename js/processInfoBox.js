@@ -26,7 +26,7 @@ function processInfoBox(domain,nameserver)
  			{
  				$("#"+nameserver+" .main_info").html("Домен зайнятий.").show();
  				$("#"+nameserver+" .site_link").html("Перейти на сайт по цій адресі").attr("href","http://"+domain+toDomain(nameserver)).show();
- 				$("#"+nameserver+" .whois").html("Whois інформація").attr("href",domain+toDomain(nameserver)).show();
+ 				$("#"+nameserver+" .short_whois").html("Whois інформація").attr("href",domain+toDomain(nameserver)).show();
   				$("#"+nameserver).removeClass("unknown no").addClass("yes");
  			}
  			else
@@ -40,7 +40,7 @@ function processInfoBox(domain,nameserver)
  				else
  				{
  					$("#"+nameserver+" .main_info").html("Хто зна....").show();
- 					$("#"+nameserver+" .whois").html("Whois інформація").attr("href",domain+toDomain(nameserver)).show();
+ 					$("#"+nameserver+" .short_whois").html("Whois інформація").attr("href",domain+toDomain(nameserver)).show();
  					$("#"+nameserver).removeClass("yes no").addClass("unknown");
  				}	
   			}

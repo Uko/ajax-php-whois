@@ -38,9 +38,10 @@ class ua_handler
 	function parse($data_str, $query)
 		{
 		$translate = array(
+			'domain' => 'name',
 			'fax-no' => 'fax',
 			'e-mail' => 'email',
-			'nic-hdl' => 'handle',
+			'nic-handle' => 'handle',
 			'person' => 'name',
 			'personname' => 'name',
 			'street address' => 'address.street',
@@ -62,7 +63,11 @@ class ua_handler
                           'registrar' => 'ua.zz'
                           );
 		
-		$reg = generic_parser_a($data_str['rawdata'], $translate, $contacts, 'domain', 'Ymd');
+		$reg = generic_parser_a($data_str['rawdata'], $translate, $contacts, 'domain', 'dmY');
+		if(substr($reg["domain"]["status"], 0, 8)=="OK-UNTIL")
+		{
+			$reg["domain"]["expires"]=substr($reg["domain"]["status"], 9, 4)."-".substr($reg["domain"]["status"], 13, 2)."-".substr($reg["domain"]["status"], 15, 2);
+		}
 		
 		$r['regrinfo'] = $reg;
 		return ($r);

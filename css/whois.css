@@ -100,3 +100,13 @@
 	margin: 150px auto;
 	display: block;
 }
+
+#dialog ul
+{
+	list-style: none;
+}
+
+#dialog .header
+{
+	font-weight: bold;
+}
