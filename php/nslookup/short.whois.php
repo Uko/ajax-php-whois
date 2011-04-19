@@ -62,20 +62,21 @@
 			{
 				$out.="<li>".$key."</li>\n";
 			}
-			$out.="</ul>\n</li>\n";
+		$out.="</ul>\n</li>\n";
 	}
 	
 	//--------------------------------------------------------------------------
 	//Assemling conracts
-	foreach ($contacts as $key => $value) {
+	foreach ($contacts as $key => $value)
 	if($result["regrinfo"][$key])
+	{
 		$out.="<li><span class=\"header\">".$value.":</span>\n<ul>\n";
 		if($result["regrinfo"][$key]["organization"])
 		{
 			if(!is_array($result["regrinfo"][$key]["organization"]))
-				{
-					$out.="<li><span class=\"header\">Організація: </span>".$result["regrinfo"][$key]["organization"]."</li>\n";
-				}
+			{
+				$out.="<li><span class=\"header\">Організація: </span>".$result["regrinfo"][$key]["organization"]."</li>\n";
+			}
 			else
 			{
 				$out.="<li><span class=\"header\">Організація:</span>\n<ul>\n";
@@ -98,9 +99,9 @@
 		if($result["regrinfo"][$key]["phone"])
 		{
 			if(!is_array($result["regrinfo"][$key]["phone"]))
-				{
-					$out.="<li><span class=\"header\">Телефон: </span>".$result["regrinfo"][$key]["phone"]."</li>\n";
-				}
+			{
+				$out.="<li><span class=\"header\">Телефон: </span>".$result["regrinfo"][$key]["phone"]."</li>\n";
+			}
 			else
 			{
 				$out.="<li><span class=\"header\">Телефони:</span>\n<ul>\n";
@@ -130,9 +131,9 @@
 		if($result["regrinfo"][$key]["email"])
 		{
 			if(!is_array($result["regrinfo"][$key]["email"]))
-				{
-					$out.="<li><span class=\"header\">Електронна пошта: </span>".$result["regrinfo"][$key]["email"]."</li>\n";
-				}
+			{
+				$out.="<li><span class=\"header\">Електронна пошта: </span>".$result["regrinfo"][$key]["email"]."</li>\n";
+			}
 			else
 			{
 				$out.="<li><span class=\"header\">Електронна пошта:</span>\n<ul>\n";

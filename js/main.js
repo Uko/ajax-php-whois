@@ -1,3 +1,4 @@
+var jaxRequest = new Array();
 $(document).ready(function()
 {
   	var previousText="";
@@ -7,6 +8,7 @@ $(document).ready(function()
   	$("#dialog").dialog({modal: true,draggable: false, resizable: false, autoOpen: false, height: 400, width: 600});
   	$(".info_box").css("display","none");
   	$(".info_box").addClass("unknown");
+	$(".info_box").each(function(){jaxRequest[$(this).attr("id")]=0;});
   	$("form").submit(function() {return false});
   	$("#mainfield").keyup(function()
   	{
