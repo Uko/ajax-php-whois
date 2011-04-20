@@ -1,13 +1,12 @@
 #results
 {
-	width: 850px;
 	overflow: auto;
 }
 
 .info_box
 {
 	margin: 5px;
-	width: 270px;
+	width: 275px;
 	float: left;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
@@ -47,13 +46,13 @@
 {
 	font-family: Helvetica, Verdana, Arial, sans-serif;
 	margin: 3px 5px;
-	width: 260px;
+	width: 265px;
 	text-align: center;
 }
 
 .info_box .data
 {
-	width: 250px;
+	width: 255px;
 	height: 60px;
 	padding: 5px;
 	margin: 5px;
@@ -92,7 +91,7 @@
 #dialog
 {
 	text-align: justify;
-	font-size: 80%;
+	font-size: 120%;
 }
 
 #dialog .progress_bar
@@ -109,4 +108,32 @@
 #dialog .header
 {
 	font-weight: bold;
+}
+
+#domains label
+{
+	margin-left: -5px;
+}
+
+#mainfield, #description, #domains, #mass_tooglers
+{
+	display: inline-block;
+}
+
+#domains
+{
+	margin-left: 5px;
+}
+
+#description
+{
+	font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	margin-left: 10px;
+	
+}
+
+form
+{
+	width: 690px;
+	margin: auto;
 }

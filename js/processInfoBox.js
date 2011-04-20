@@ -44,6 +44,7 @@ function processInfoBox(domain,nameserver)
 					else
 					{
 						$("#"+nameserver+" .main_info").html("Хто зна....").show();
+						$("#"+nameserver+" .description").html("Зараз важко точно визначити стан домену.").show();
 						$("#"+nameserver+" .short_whois").html("Whois інформація").attr("href",domain+toDomain(nameserver)).show();
 						$("#"+nameserver).removeClass("yes no").addClass("unknown");
 					}	
