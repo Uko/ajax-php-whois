@@ -11,40 +11,8 @@ body
 	height: 516px;
 }
 
-#main
-{
-	background: white;
-	width: 855px;
-	padding: 0px 35px;
-	margin: auto;
-}
-
 #bottom
 {
 	background-image: url('../techImages/uar_style/bottom.jpg');
 	height: 242px;
-}
-
-#mainfield
-{
-	background: transparent url('../techImages/uar_style/input.png');
-	font-family: 'Lucida Grande';
-	border: none;
-	font-size: 16px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: bold;
-	height: 22px;
-	letter-spacing: normal;
-	line-height: normal;
-	padding-bottom: 0px;
-	padding-left: 8px;
-	padding-right: 4px;
-	padding-top: 6px;
-	text-decoration: none;
-	text-indent: 0px;
-	text-shadow: none;
-	text-transform: none;
-	width: 238px;
-	word-spacing: 0px;
 }

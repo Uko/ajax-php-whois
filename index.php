@@ -1,5 +1,5 @@
 <?php
-	$domains=array(".com",".net",".org",".biz",".info",".ua",".com.ua",".lviv.ua");
+	$domains=array(".com",".net",".org",".biz",".info",".ua",".com.ua",".lviv.ua",".kiev.ua",".lutsk.ua");
 	include_once("php/idDomain.php");
 	echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 ?>
@@ -18,25 +18,30 @@
 		<script type="text/javascript" src="js/main.js"></script> 
 		<script type="text/javascript" src="js/idDomain.js"></script>
 		<script type="text/javascript" src="js/processInfoBox.js"></script>
-		<script type="text/javascript" src="js/whois.js"></script>                 
+		<script type="text/javascript" src="js/whois.js"></script>
+		<script type="text/javascript" src="js/timer.js"></script> 
 		<title>Ns lookup</title>
 	</head>
 	<body>
 		<div id="dialog" title="Whois"></div>
+		<div id="org_policy" title="Політика зони .org">Зона .org дозволяє отримувати інформацію про домени лише 4 рази за 1 хвилину. Як наслідок, для отримання інформації про доменні імена в зоні .org потрібно набрати бажане ім'я і натиснути <span class="refresh"></span>. Ця операція дозволяється один раз на 15 секунд.</div>
 		<div id="top"></div>
-		<div id="main">
+		<div id="whois">
 			<form action="#">
-				<input type="text" id="mainfield" /><p id="description">Введіть доменне ім'я, та виберіть зони для пошуку:</p>
+				<p id="intro">Виберіть зони для пошуку доменного імені:</p>
 				<div id="domains">
 				<?php
 					foreach ($domains as $i)
 					{
-						echo "<input type=\"checkbox\" value=\"".toId($i)."\" id=\"ch".toId($i)."\" /><label for=\"ch".toId($i)."\">".$i."</label>\n";
+						echo "<input class=\"zone_toogle\" type=\"checkbox\" value=\"".toId($i)."\" id=\"ch".toId($i)."\" /><label for=\"ch".toId($i)."\">".$i."</label>\n";
 					}
 				?>
 				</div>
 				<div id="mass_tooglers">
 					<button id="check_all">Вибрати всі</button><button id="uncheck_all">Відмінити вибрані</button>
+				</div>
+				<div id="input_block">
+					<input type="text" id="mainfield" /><p>доменне ім'я для пошуку.</p>
 				</div>
 			</form>
 			<div id="results">
@@ -47,12 +52,12 @@
 							<h3 class=\"title\">".$i."</h3>
 							<div class=\"data\">
 								<p class=\"main_info\"></p>
-								<a class=\"site_link\"></a>
-								<a class=\"short_whois\"></a>
 								<p class=\"description\"></p>
+								<button class=\"site_link nobutton\">Відкрити веб сторінку</button>
+								<button class=\"short_whois nobutton\">Whois інформація</button>
 								<img src=\"#\" alt=\"…\" class=\"progress_bar\" />
 							</div>
-						</div>";
+						</div>\n";
 					}
 			?>
 			</div>

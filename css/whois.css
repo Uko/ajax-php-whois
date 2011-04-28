@@ -1,15 +1,105 @@
+/*org-specific styling*/
+.info_box_org .title
+{
+	width: 226px;
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+	margin: 0px 0px 0px 5px;
+	padding: 3px 0px 5px 0px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.info_box_org>.refresh, .info_box_org>.info
+{
+	width: 17px;
+	height: 17px;
+	padding: 0px;
+	display: inline-block;
+	background: black;
+	border: none;
+	margin-top: 6px;
+	margin-left: 1px;
+	vertical-align: top;
+	cursor: pointer;
+}
+.info_box_org>.refresh
+{
+	margin-right: 2px;
+	background: url('../techImages/refresh.png');
+	background-position: 0px 0px;
+}
+.info_box_org>.info
+{
+	margin-right: 5px;
+	background: url('../techImages/info.png');
+	background-position: 0px 0px;
+}
+.info_box_org>.info:active
+{
+	background-position: 17px 0px;
+}
+
+span.info, span.refresh
+{
+	width: 17px;
+	height: 17px;
+	display: inline-block;
+	border: solid 1px gray;
+}
+
+span.info
+{
+	background: gray url('../techImages/info.png');
+	margin: 0px;
+	padding: 0px;
+}
+
+span.refresh
+{
+	background: gray url('../techImages/refresh.png');
+	margin: 0px;
+	padding: 0px;
+}
+
+#org_policy
+{
+	text-align: justify;
+}
+/*end of org-specific styling*/
+
 #results
 {
 	overflow: auto;
+	clear: both;
 }
 
-.info_box
+.nobutton
+{
+	background: none;
+	border: none;
+	color: #00E;
+	text-decoration: underline;
+	font-size: 14px;
+	padding: 0px;
+	margin: 0px;
+	cursor: pointer;
+}
+
+.nobutton:active
+{
+	color: #F00;
+}
+
+.info_box, .info_box_org
 {
 	margin: 5px;
 	width: 275px;
 	float: left;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
+	height: 105px;
+	
 }
 
 .unknown 
@@ -24,7 +114,7 @@
 
 .yes
 {
-	background: maroon;
+	background: #D00;
 }
 
 .yes .title
@@ -34,7 +124,7 @@
 
 .no
 {
-	background: navy;
+	background: #014c83;
 }
 
 .no .title
@@ -45,30 +135,31 @@
 .info_box .title
 {
 	font-family: Helvetica, Verdana, Arial, sans-serif;
-	margin: 3px 5px;
+	margin: 0px 5px;
+	padding: 3px 0px 5px 0px;
 	width: 265px;
 	text-align: center;
 }
 
-.info_box .data
+.info_box .data, .info_box_org .data
 {
 	width: 255px;
 	height: 60px;
 	padding: 5px;
-	margin: 5px;
+	margin: 0px 5px 5px 5px;
 	-moz-border-radius: 0px 0px 5px 5px;
 	border-radius: 0px 0px 5px 5px;
 	background: white;
-	text-align: justify;
+	text-align: center;
 }
 
-.info_box .data .progress_bar
+.info_box .data .progress_bar, .info_box_org .data .progress_bar 
 {
 	margin: 22px auto;
 	display: block;
 }
 
-.info_box .main_info
+.info_box .main_info, .info_box_org .main_info
 {
 	text-align: center;
 	display: block;
@@ -76,16 +167,16 @@
 	font-weight: bold;
 }
 
-.info_box .description
+.info_box .description, .info_box_org .description
 {
 	margin: 0px;
+	text-align: justify;
 }
 
-.info_box .data a
+.info_box .data button, .info_box_org .data button
 {
 	text-align: center;
-	display: block;
-	margin: auto;
+	margin: 1px auto;
 }
 
 #dialog
@@ -110,30 +201,92 @@
 	font-weight: bold;
 }
 
+form
+{
+	/*width: 690px;*/
+	margin: auto;
+}
+
+#intro
+{
+	margin: 0px;
+	padding: 10px 10px;
+	font-family: 'Lucida Grande','Lucida Sans',Arial;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#domains
+{
+	float: left;
+}
+
 #domains label
 {
 	margin-left: -5px;
 }
 
-#mainfield, #description, #domains, #mass_tooglers
+#domains input:first-child+label
 {
-	display: inline-block;
+	margin-left: 0px;
 }
 
-#domains
+#mass_tooglers
 {
-	margin-left: 5px;
+	float: right;
 }
 
-#description
+#mass_tooglers button
 {
-	font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-	margin-left: 10px;
-	
+	margin-bottom: 0px;
+	margin-top: 0px;
 }
 
-form
+#input_block
 {
-	width: 690px;
+	overflow: auto;
+	clear: both;
+	padding: 10px 20px;
+}
+
+#mainfield
+{
+	background: transparent url('../techImages/uar_style/input.png');
+	font-family: 'Lucida Grande';
+	border: none;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	height: 22px;
+	letter-spacing: normal;
+	line-height: normal;
+	padding-bottom: 0px;
+	padding-left: 8px;
+	padding-right: 4px;
+	padding-top: 6px;
+	text-decoration: none;
+	text-indent: 0px;
+	text-shadow: none;
+	text-transform: none;
+	width: 238px;
+	word-spacing: 0px;
+	float: left;
+}
+
+#mainfield+p
+{
+	float: left;
+	margin: 0px 10px;
+	line-height: 28px;
+	font-family: 'Lucida Grande','Lucida Sans',Arial;
+	font-size: 16px;
+}
+
+#whois
+{
+	background: white;
+	width: 855px;
+	padding: 0px 35px;
 	margin: auto;
 }
