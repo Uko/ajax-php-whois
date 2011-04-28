@@ -64,18 +64,20 @@ $(document).ready(function()
   	$(".info_box").addClass("unknown");
 	$(".info_box").each(function(){jaxRequest[$(this).attr("id")]=0;});
   	$("form").submit(function() {return false});
-	$("#mainfield").keypress(function(e)
+	$("#mainfield").keypress(function AlphaNumericOnly(e)
 	{
-		var key = e.charCode || e.keyCode || 0;
-		var keychar = String.fromCharCode(key);
-		if (  ((key == 8 || key == 9 || key == 46 || key == 35 || key == 36 || (key >= 37 && key <= 40)) && e.charCode==0) || (key >= 48 && key <= 57) || (key >= 97 && key <= 122) || (key >= 65 && key <= 90) || key == 45 )
-		{
-			return;
-		} 
-		else {
-			e.preventDefault();
-		}
-    });
+	   // copyright 1999 Idocs, Inc. http://www.idocs.com
+	   var key = [e.keyCode||e.which];
+	   var keychar = String.fromCharCode([e.keyCode||e.which]);
+	   keychar = keychar.toLowerCase();
+	   //alert(key);
+	   if ((key==null) || (key==0) || (key==8) || (key==9) || (key==13) || (key==27) || (key==37) || (key==39) || (key==46))
+			return true;
+	   else if ((("abcdefghijklmnopqrstuvwxyz0123456789-").indexOf(keychar) > -1))
+			return true;
+	   else
+			return false;
+	});
   	$("#mainfield").keyup(function()
   	{
 		if($(this).val()!=previousText)
