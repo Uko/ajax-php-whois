@@ -62,6 +62,22 @@
 		if($result["regrinfo"][$key])
 		{
 			$out.="<li><span class=\"header\">".$value.":</span>\n<ul>\n";
+			if($result["regrinfo"][$key]["name"])
+			{
+				if(!is_array($result["regrinfo"][$key]["name"]))
+				{
+					$out.="<li><span class=\"header\">Назва: </span>".$result["regrinfo"][$key]["name"]."</li>\n";
+				}
+				else
+				{
+					$out.="<li><span class=\"header\">Організація:</span>\n<ul>\n";
+					foreach ($result["regrinfo"][$key]["name"] as $name)
+					{
+						$out.="<li>".$name."</li>\n";
+					}
+					$out.="</ul>\n</li>\n";
+				}
+			}
 			if($result["regrinfo"][$key]["organization"])
 			{
 				if(!is_array($result["regrinfo"][$key]["organization"]))
@@ -83,7 +99,11 @@
 				$out.="<li><span class=\"header\">Адреса:</span>\n<ul>\n";
 				foreach ($result["regrinfo"][$key]["address"] as $address)
 				{
-					$out.="<li>".$address."</li>\n";
+					if(!is_array($address))
+						$out.="<li>".$address."</li>\n";
+					else
+						foreach ($address as $addressmore)
+							$out.="<li>".$addressmore."</li>\n";
 				}
 				$out.="</ul>\n</li>\n";
 			}
