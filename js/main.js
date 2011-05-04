@@ -70,8 +70,7 @@ $(document).ready(function()
 	   var key = [e.keyCode||e.which];
 	   var keychar = String.fromCharCode([e.keyCode||e.which]);
 	   keychar = keychar.toLowerCase();
-	   //alert(key);
-	   if ((key==null) || (key==0) || (key==8) || (key==9) || (key==13) || (key==27) || (key==37) || (key==39) || (key==46))
+	   if ((key==null) || (key==0) || (key==8) || (key==9) || (key==13) || (key==27) || (key==37) || (key==39))
 			return true;
 	   else if ((("abcdefghijklmnopqrstuvwxyz0123456789-").indexOf(keychar) > -1))
 			return true;
