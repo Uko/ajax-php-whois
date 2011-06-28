@@ -7,12 +7,12 @@ body
 
 #top
 {
-	background-image: url('../techImages/uar_style/top.jpg');
-	height: 516px;
+	background-image: url('../techImages/uar_style/top.png');
+	height: 73px;
 }
 
 #bottom
 {
-	background-image: url('../techImages/uar_style/bottom.jpg');
-	height: 242px;
+	background-image: url('../techImages/uar_style/bottom.png');
+	height: 88px;
 }

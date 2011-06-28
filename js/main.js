@@ -60,6 +60,7 @@ $(document).ready(function()
 	$("#domains").buttonset();
 	$("#mass_tooglers").buttonset();
 	$("#input_block").hide();
+	$("#alert").hide();
   	$(".info_box").hide();
   	$(".info_box").addClass("unknown");
 	$(".info_box").each(function(){jaxRequest[$(this).attr("id")]=0;});
@@ -75,7 +76,12 @@ $(document).ready(function()
 	   else if ((("abcdefghijklmnopqrstuvwxyz0123456789-").indexOf(keychar) > -1))
 			return true;
 	   else
+	   {
+		   $("#alert").stop(true, true).hide().fadeIn("fast",function(){
+			   $("#alert").delay(10000).fadeOut(5000)
+		   });
 			return false;
+		}
 	});
   	$("#mainfield").keyup(function()
   	{

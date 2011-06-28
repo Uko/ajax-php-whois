@@ -41,7 +41,7 @@
 					<button id="check_all">Вибрати всі</button><button id="uncheck_all">Відмінити вибрані</button>
 				</div>
 				<div id="input_block">
-					<input type="text" id="mainfield" /><p>доменне ім'я для пошуку.</p>
+					<input type="text" id="mainfield" /><p>доменне ім'я для пошуку.</p><p id="alert">Доменне ім'я може містити лише латинські літери (a-z), цифри (0-9) та дефіз „-“!</p>
 				</div>
 			</form>
 			<div id="results">

@@ -283,6 +283,19 @@ form
 	font-size: 16px;
 }
 
+#alert
+{
+	font-size: 12px;
+	font-family: 'Lucida Grande','Lucida Sans',Arial;
+	color: red;
+	font-weight: bold;
+	height: 28px;
+	width: 338px;
+	line-height: 12px;
+	margin: 0px;
+	display: inline-block;
+}
+
 #whois
 {
 	background: white;
